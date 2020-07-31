@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<title>Ресторан Анастасія</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/rd-mailform.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-migrate-1.2.1.js"></script>
+
+	<!--[if lt IE 9]>
+	<html class="lt-ie9">
+	<div style=' clear: both; text-align:center; position: relative;'>
+		<a href="http://windows.microsoft.com/en-US/internet-explorer/..">
+			<img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820"
+					 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+		</a>
+	</div>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+	<script src='js/device.min.js'></script>
+</head>
+
+<body>
+<div class="page">
+	<!--==============================HEADER==============================-->
+	<header>
+		<section class="parallax parallax01">
+			<div class="top-panel">
+				<div class="container">
+					<div class="brand">
+						<h1 class="brand_name"><a href="./">Анастасія</a></h1>
+						<p class="brand_slogan">ресторан</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<h2>Відкрийте для себе новий спосіб полюбити їжу</h2>
+				<p><em>Найращий сервіс, найкраща їжа та найкраща атмосфера!</em></p>
+				<div class="row">
+					<div class="preffix_4 grid_4">
+						<!-- RD Mailform -->
+						<form class='rd-mailform' method="post" action="bat/rd-mailform.php">
+							<!-- RD Mailform Type -->
+							<input type="hidden" name="form-type" value="contact"/>
+							<!-- END RD Mailform Type -->
+							<fieldset>
+								<label data-add-placeholder>
+									<input type="text"
+										   name="name"
+										   placeholder="Им'я"
+										   data-constraints="@NotEmpty @LettersOnly"/>
+								</label>
+
+								<label data-add-placeholder data-add-icon>
+									<input type="date"
+										   name="date"
+										   data-placeholder="Дата"
+										   data-constraints="@Date"
+											/>
+								</label>
+
+								<label data-add-placeholder>
+									<input type="text"
+										   name="email"
+										   placeholder="E-mail"
+										   data-constraints="@NotEmpty @Email"/>
+								</label>
+
+								<label data-add-placeholder>
+									<input type="text"
+										   name="phone"
+										   placeholder="Телефон"
+										   data-constraints="@Phone"/>
+								</label>
+
+								<div class="mfControls btn-group">
+									<button class="btn" type="submit">Забронювати</button>
+								</div>
+								<div class="mfInfo"></div>
+							</fieldset>
+						</form>
+						<!-- END RD Mailform -->
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+
+	<!--==============================CONTENT==============================-->
+	<main>
+		<section class="well center">
+			<div class="container">
+				<h2>Про наш ресторан</h2>
+				<p>Ресторан «Анастасія» - це команда однодумців, яка давно займається організацією урочистих заходів і вже встигла себе зарекомендувати як один з кращих банкетних ресторанів,. Ресторан «Анастасія» пропонує своїм гостям прекрасний сервіс і індивідуальний підхід до кожного, теплу привітну атмосферу, смачні страви східної, європейської і української кухонь і красиві, стилістично витримані інтер'єри, в яких однаково приємно провести вечерю для двох або в компанії близьких.</p>
+				<div class="row iconed-list">
+					<div class="grid_4">
+						<div class="icon fa-coffee"></div>
+						<h3>Перелік страв</h3>
+						<p>Великий асортимент страв на кожний смак.</p>
+					</div>
+					<div class="grid_4">
+						<div class="icon fa-glass icon__bg-2"></div>
+						<h3>Страви дня</h3>
+						<p>Кожного дня нова унікальна страва від нашого шеф-повару.</p>
+					</div>
+					<div class="grid_4">
+						<div class="icon fa-cutlery icon__bg-3"></div>
+						<h3>Приватна вечеря</h3>
+						<p>Замовте окремий зал ресторану та отримайте страви за індивідуальним меню.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="well well__02 bg-2 shadow">
+			<div class="container">
+				<div class="row">
+					<div class="grid_5">
+						<div class="img"><img src="images/img01.jpg" alt=""></div>
+					</div>
+					<div class="grid_7 offset01">
+						<h2>Використовуємо лише якісні інгредієнти</h2>
+						<p>Політика нашого ресторан завжди має чіткі і прості правила використання продуктів. На нашій кухні ми завжди використовуємо лише найкращі матеріали, які забезпечать незабутній смак страв і максимальну користь для вашого організму.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="well well__03">
+			<div class="container">
+				<h2>Наші переваги</h2>
+				<div class="row">
+					<div class="grid_6">
+						<div class="iconed-box">
+							<div class="icon fa-comments-o"></div>
+							<h4>Замовте Online</h4>
+							<p>Ви можете замовити столик у нашому ресторані, навіть не виходячи з дому.</p>
+						</div>
+					</div>
+					<div class="grid_6">
+						<div class="iconed-box">
+							<div class="icon fa-book"></div>
+							<h4>Привабливе меню</h4>
+							<p>У нашому меню ви знайдете кращі страви европейської, східної та української кухні.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="grid_6">
+						<div class="iconed-box">
+							<div class="icon fa-group"></div>
+							<h4>Організація банкетів</h4>
+							<p>Замовляйте кращий банкет у нашому ресторані, який вам точно сподобається.</p>
+						</div>
+					</div>
+					<div class="grid_6">
+						<div class="iconed-box">
+							<div class="icon fa-heart-o"></div>
+							<h4>Цінуємо кожного клієнта</h4>
+							<p>Ми з повагою відносимося до кожного нашого клієнта, та готові прикласти всі зусилля для вашого комфорту.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="parallax parallax02 shadow">
+			<div class="container">
+				<div class="row">
+					<div class="preffix_1 grid_10">
+						<blockquote>
+							<q>Ресторан "Анастасія" - один з найбільших ресторанів Києва від знаменитого ресторанного консультанта, та ще й стейк-хаус, фіш-хаус, з величезним банкетним залом і віп-кімнатою. Таке неможливо пропустити.</q>
+							<div class="img img__circle"><img src="images/img02.jpg" alt=""></div>
+							<h5><cite>Ольга Карпенко</cite></h5>
+							<p>Відомий ресторанний критик</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="well">
+			<div class="container">
+				<h2>Наші новини</h2>
+				<div class="row">
+					<div class="grid_6 left">
+						<h4>Знижки на десерти</h4>
+						<p>Кожну середу та неділю отримуйте знижку на всі десерти -25%. Дана акція діє лише до 31.06.2020р.</p>
+					</div>
+					<div class="grid_6 left">
+						<h4>Нова піч </h4>
+						<p>Для приготування кращих страв ми почали використовувати Хоспер. Хоспер - це закрита іспанська піч, яку топлять деревним вугіллям, і яка зберігає перевагу живого вогню.</p>
+					</div>
+				</div>
+				<div class="row offset02">
+					<div class="grid_6 left">
+						<h4>Готуйся до Великдня</h4>
+						<p>У меню ресторана "Антастасія" ви можете знайти багато різноманітних пасок, спеціально приготовлених до свята Великдня.</p>
+					</div>
+					<div class="grid_6 left">
+						<h4>Нова страва кожну неділю</h4>
+						<p>Кожну неділю ми додаємо нову страву у наше меню. Тому не прогав страву і спробуй новинку першим!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="well well__04 bg-3">
+			<div class="container">
+			<h2>Отримуй 100% насолодження<br> кожного разу</h2>
+			<a href="#" class="btn">Замовити столик</a>
+			</div>
+		</section>
+	</main>
+
+	<!--==============================FOOTER==============================-->
+	<footer>
+		<div class="container">
+			<div class="footer-brand">
+				<div class="footer-brand_name"><a href="#">Анастасія</a></div>
+				<p class="footer-brand_slogan">ресторан</p>
+			</div>
+			<p class="copyright">
+				© <span id="copyright-year"></span>. Всі права захищені
+				<!-- {%FOOTER_LINK} -->
+			</p>
+		</div>
+	</footer>
+</div>
+
+<script src="js/script.js"></script>
+<!-- coded by nyan -->
+</body>
+</html>

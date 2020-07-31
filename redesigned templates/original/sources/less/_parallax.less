@@ -1,0 +1,45 @@
+/*==================   Parallax    ======================*/
+
+//--------------------------------------------------------------
+//                      Main styles
+//--------------------------------------------------------------
+.parallax {
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.mobile &, .tablet & {
+		background-position: 50% 0 !important;
+	}
+
+	h1, h2, h4, h6 { color: @fnt-col-1; }
+	color: @fnt-col-1;
+}
+
+//--------------------------------------------------------------
+//                   Parallax Backgrounds
+//--------------------------------------------------------------
+.parallax01{
+	background-color: #FFF;
+	background-image: url(../images/parallax01.jpg);
+	padding: 210px 0 187px;
+    @media (max-width: 767px) { padding: 160px 0 120px; }
+}
+
+.parallax02{
+	background-color: #FFF;
+	background-image: url(../images/parallax02.jpg);
+	padding: 78px 0 106px;
+    @media (max-width: 767px) { padding: 60px 0 80px; }
+}
+
+
+//--------------------------------------------------------------
+//                      Responsive Layout
+//--------------------------------------------------------------
+@media (max-width: 767px) {
+	.parallax{
+		background-position: center 0 !important;
+	}
+}
+

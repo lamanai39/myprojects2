@@ -1,0 +1,417 @@
+/*========================================================
+						Includes
+=========================================================*/
+@import "_mixins.less";
+@import "_variables.less";
+@import "animate.css";
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+/*========================================================
+					  Main Styles
+=========================================================*/
+body {
+	font-family: @fnt-fam-2;
+	font-size: 16px;
+	line-height: 32px;
+	font-weight: 400;
+	color: @body-color;
+	background: @body-bg;
+	-webkit-text-size-adjust: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @heading-color;
+}
+
+h1{
+
+}
+
+h2{
+	font-size: 45px;
+	line-height: 62px;
+	font-weight: 400;
+    @media (max-width: 767px) {
+    	font-size: 38px;
+    	line-height: 50px;
+    }
+}
+
+h3{
+	font-size: 34px;
+	line-height: 40px;
+	font-weight: 400;
+    @media (max-width: 979px) {
+    	font-size: 28px;
+    	line-height: 34px;
+    }
+}
+
+h4{
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 400;
+	color: @fnt-col-7;
+}
+
+h5{
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: 400;
+	color: @fnt-col-7;
+}
+
+h6{
+	
+}
+
+p{
+	a:hover{ text-decoration: underline; }
+}
+
+a {
+	font: inherit;
+	color: inherit;
+	text-decoration: none;
+
+	&:active {
+		background: transparent;
+	}
+
+	&:focus{
+		outline: none;
+	}
+
+	.transition(.3s);
+}
+
+a[href^="tel:"] {
+	color: inherit;
+	text-decoration: none;
+}
+
+.fa{
+	line-height: inherit;
+}
+
+[class*='fa-']{
+	&:before{
+		font-weight: 400;
+		font-family: @fa;
+	}     
+}
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.page {
+	overflow: hidden;
+	min-height: 500px;
+
+	.lt-ie9 & {
+		min-width: 1200px;
+	}
+}
+
+/*=======================================================
+                       Main Layout
+=========================================================*/
+* + h2 { margin-top: 50px; }
+* + h3 { margin-top: 40px; }
+* + h4 { margin-top: 30px; }
+* + h5 { margin-top: 20px; }
+* + h6 { margin-top: 20px; }
+
+.icon + h3 { margin-top: 24px; }
+.img + h5 { margin-top: 26px; }
+
+* + p { margin-top: 15px; }
+h2 + p { margin-top: 22px; }
+h3 + p { margin-top: 14px; }
+h4 + p { margin-top: 15px; }
+
+* + .row { margin-top: 39px; }
+h2 + .row { margin-top: 30px; }
+.row + .row { margin-top: 26px; }
+.row + .offset02 { margin-top: 36px; }
+
+* + .img { margin-top: 20px; }
+q + .img { margin-top: 30px; }
+
+* + .btn { margin-top: 39px; }
+
+* + .footer-brand { margin-top: 16px;  }
+* + .copyright { margin-top: 16px; }
+
+/*=======================================================
+						Components
+=========================================================*/
+@import "_to-top.less";
+@import "_parallax.less";
+
+/*==================== Btn ====================*/
+.btn {
+	position: relative;
+	display: inline-block;
+    @media (max-width: 767px) { display: block; }
+	font-family: @fnt-fam-2;
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: 500;
+	text-align: center;
+	color: @fnt-col-1;
+	padding: 15px 98px 14px;
+    @media (max-width: 767px) { padding: 15px 0 14px; }
+	background: @col-sch-6;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.41);
+	&:hover {
+		background: darken(@col-sch-6, 10%);
+		box-shadow: 0 0 0 0px rgba(0,0,0,0);
+	}
+	&:active {
+		background: darken(@col-sch-6, 20%);
+		box-shadow: 0 0 0 0px rgba(0,0,0,0);
+	}
+}
+
+/*==================== Icon ====================*/
+.icon {
+	margin-left: auto;
+	margin-right: auto;
+	width: 105px;
+	height: 105px;
+	line-height: 105px;
+	text-align: center;
+
+	font-size: 65px;
+	color: @fnt-col-1;
+	background: @content-icons-bg-1;
+	border-radius: 50%;
+
+	&__bg-2 {
+		background: @content-icons-bg-2;
+	}
+
+	&__bg-3 {
+		background: @content-icons-bg-3;
+	}
+}
+
+/*==================== Img ====================*/
+.img {
+	display: inline-block;
+	max-width: 100%;
+	&__circle {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+/*==================== Iconed list ====================*/
+.iconed-list {
+	font-size: 14px;
+	line-height: 28px;
+}
+
+/*==================== Iconed box ====================*/
+.iconed-box {
+	position: relative;
+	text-align: left;
+	padding: 0 0 0 110px;
+
+	.icon {
+		position: absolute;
+		left: 0;
+		top: 5px;
+		width: 84px;
+		height: 84px;
+		line-height: 84px;
+		font-size: 50px;
+		background: @content-icons-bg-4;
+		& + * { margin-top: 0; }
+	}
+}
+
+/*==================== Quote ====================*/
+blockquote {
+	font-size: 14px;
+	line-height: 22px;
+
+	q {
+		display: block;
+		position: relative;
+		font-size: 24px;
+		line-height: 38px;
+		vertical-align: baseline;
+		text-indent: 16px;
+		&:before {
+			content: "“";
+			position: relative;
+			top: 47px;
+			left: -16px;
+			font-size: 94px;
+			color: @fnt-col-2;
+		}
+	}
+}
+
+
+/*========================================================
+					 HEADER  Section
+=========================================================*/
+header {
+	position: relative;
+	color: @fnt-col-1;
+	background: @header-bg;
+	text-align: center;
+
+	h2 {
+		font-size: 56px;
+		line-height: 68px;
+	}
+
+	em {
+		font-size: 34px;
+		line-height: 68px;
+		font-weight: 400;
+	}
+
+	h2 + p { margin-top: 0; }
+	* + .row { margin-top: 43px; }
+}
+
+/*==================== Top Panel ====================*/
+.top-panel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 19px 0 17px;
+	.background(fade(@heade-panel-bg, 90%););
+	.container { position: relative; }
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+}
+
+/*==================== Brand ====================*/
+.brand {
+	font-family: @fnt-fam-1;
+	display: inline-block;
+	&_name{
+		position: relative;
+		font-size: 35px;
+		line-height: 32px;
+		font-weight: 700;
+
+		color: @fnt-col-1;
+		overflow: hidden;
+		padding: 0 0 4px;
+	}
+	&_slogan {
+		font-size: 10px;
+		line-height: 18px;
+		font-weight: 300;
+		letter-spacing: 3.4px;
+		text-transform: uppercase;
+		color: @fnt-col-2;
+		margin: 0;
+	}
+}
+
+/*========================================================
+					 CONTENT  Section
+=========================================================*/
+main {
+	display: block;
+	padding: 0 0 0 0;
+	background: @content-bg;
+	text-align: center;
+}
+
+/*==================== Well ====================*/
+.well{
+	padding: 59px 0 81px 0;
+
+	&__02 {
+		padding: 90px 0 90px 0;
+	}
+
+	&__03 {
+		padding: 67px 0 88px 0;
+	}
+
+	&__04 {
+		padding: 103px 0 114px 0;
+	}
+}
+
+/*==================== Background ====================*/
+.bg-2 {
+	background: @content-bg-2;
+	color: @fnt-col-2;
+	h1, h2, h3, h4, h5, h6 {
+		color: @fnt-col-1;
+	}
+}
+.bg-3 {
+	background: @content-bg-3;
+}
+
+/*==================== Offset ====================*/
+.offset01 {
+	margin-top: 14px;
+}
+
+/*==================== Shadow ====================*/
+.shadow {
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+}
+
+/*========================================================
+					 FOOTER  Styles
+=========================================================*/
+footer{
+	text-align: center;
+	padding: 44px 0 40px;
+	font-size: 12px;
+	line-height: 25px;
+	box-shadow: inset 0px 3px 5px 0px rgba(0,0,0,0.2);
+}
+
+/*==================== Footer Brand ====================*/
+.footer-brand {
+	display: inline-block;
+	font-family: @fnt-fam-1;
+	color: @fnt-col-2;
+	&_name{
+		position: relative;
+		font-size: 35px;
+		line-height: 30px;
+		font-weight: 700;
+
+		color: @fnt-col-1;
+		overflow: hidden;
+		padding: 0 0 4px;
+	}
+	&_slogan {
+		color: @fnt-col-2;
+		font-size: 10px;
+		line-height: 20px;
+		font-weight: 300;
+		letter-spacing: 2.8px;
+		text-transform: uppercase;
+
+		margin: 0;
+	}
+}
